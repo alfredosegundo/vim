@@ -59,3 +59,5 @@ function! CSE(runthis, ...)
   :wa
   exec ':!clear && tput cup 1000 0;' . a:runthis . ' ' . join(a:000, ' ')
 endfunction
+
+:command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
