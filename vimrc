@@ -68,6 +68,13 @@ endfunction
 map <leader>vimrc :tabe ~/.vim/vimrc<cr>
 autocmd bufwritepost .vimrc source $VIMRC
 
+" nerdtree mappings
+"
+
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+
 " vim-go mappings
 "
 " format with goimports instead of gofmt
